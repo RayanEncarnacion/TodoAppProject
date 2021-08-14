@@ -1,1 +1,110 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@use 'fonts';
+@media (min-width: 640px) {
+  .app-container h1 {
+    font-size: 3.2em;
+  }
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Chivo", sans-serif;
+  background-color: #e3e3e3;
+  width: 100vw;
+  height: 100vh;
+}
+
+.app-container {
+  width: 80%;
+  max-width: 700px;
+  margin: 5em auto 0;
+  text-align: center;
+}
+
+.app-container h1 {
+  font-size: 2.5em;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 0.9em;
+}
+
+.app-container input {
+  width: 80%;
+  padding: 8px 10px;
+  margin: 0 auto 0.8em;
+  background-color: white;
+  color: #221f1f;
+  border: none;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+}
+
+.app-container input:focus {
+  border: none;
+  outline: none;
+}
+
+.app-container .todo {
+  width: 80%;
+  padding: 8px 10px;
+  margin: 0 auto 0.8em;
+  background-color: #fcfcfc;
+  color: #221f1f;
+  border: none;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-container .todo button {
+  text-align: center;
+  font-size: 1em;
+  background-color: transparent;
+  padding: 0 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.app-container .todo.completed {
+  border: 2px solid #22d389;
+  padding: 6px;
+}
+
+.app-container .todo.completed p {
+  text-decoration: line-through;
+  color: #22d389;
+}
+
+.app-container .todo.completed button:first-child:focus {
+  color: #22d389;
+}
+/*# sourceMappingURL=main.css.map */
