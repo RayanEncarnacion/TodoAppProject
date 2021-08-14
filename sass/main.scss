@@ -1,7 +1,6 @@
 @import 'partials/resets';
 @import 'partials/variables';
 @import 'partials/mixins';
-@import 'partials/media-queries';
 
 body {
   @include centeredFlex(column);

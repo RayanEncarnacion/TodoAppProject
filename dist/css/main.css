@@ -6,12 +6,6 @@
 }
 
 @use 'fonts';
-@media (min-width: 640px) {
-  .app-container h1 {
-    font-size: 3.2em;
-  }
-}
-
 body {
   display: -webkit-box;
   display: -ms-flexbox;
