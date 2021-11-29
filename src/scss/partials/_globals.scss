@@ -46,6 +46,7 @@ body {
     @include m.centeredFlex(row);
     justify-content: space-between;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border: 2px solid transparent;
 
     .todo-text {
       color: #111;
@@ -63,8 +64,7 @@ body {
     }
 
     &.completed {
-      border: 2px solid v.$accent-color;
-      padding: 6px;
+      border-color: v.$accent-color;
 
       & p {
         text-decoration: line-through;
