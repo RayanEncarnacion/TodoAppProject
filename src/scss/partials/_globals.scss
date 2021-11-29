@@ -1,0 +1,79 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+body {
+  @include m.centeredFlex(column);
+  background-image: linear-gradient(
+    to right bottom,
+    #258921,
+    #008a6f,
+    #0084d1,
+    #0070ff,
+    #7012eb
+  );
+  font-family: v.$primary-font;
+  background-color: v.$primary-color;
+  width: 100vw;
+  height: 100vh;
+}
+
+.app-container {
+  width: 80%;
+  max-width: 700px;
+  margin: 5em auto 0;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5em;
+    font-family: v.$title-font;
+    margin-bottom: 0.9em;
+    color: v.$primary-color;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  }
+
+  input {
+    @include m.todoStyle(95%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  .todo {
+    @include m.todoStyle(10%);
+    @include m.centeredFlex(row);
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+    .todo-text {
+      color: #111;
+      font-weight: bold;
+    }
+
+    button {
+      text-align: center;
+      font-size: 1em;
+      background-color: transparent;
+      padding: 0 3px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &.completed {
+      border: 2px solid v.$accent-color;
+      padding: 6px;
+
+      & p {
+        text-decoration: line-through;
+        color: v.$accent-color;
+      }
+
+      & button:first-child:focus {
+        color: v.$accent-color;
+      }
+    }
+  }
+}
