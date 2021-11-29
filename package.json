@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel public/index.html",
+    "sass": "sass --watch src/scss/main.scss public/main.css",
+    "build": "sass src/scss/main.scss public/main.css && parcel build public/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.37.5"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.1"
   }
 }
