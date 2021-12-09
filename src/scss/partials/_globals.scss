@@ -3,14 +3,7 @@
 
 body {
   @include m.centeredFlex(column);
-  background-image: linear-gradient(
-    to right bottom,
-    #258921,
-    #008a6f,
-    #0084d1,
-    #0070ff,
-    #7012eb
-  );
+  background-image: linear-gradient(to bottom, #120c39, #202461, #2a3e8c, #2a5bba, #127aeb);
   font-family: v.$primary-font;
   background-color: v.$primary-color;
   width: 100vw;
